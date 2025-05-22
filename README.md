@@ -43,9 +43,24 @@ In this exercise you will:
 **Your Commands & Output**
 
 ```bash
-# Paste here the sequence of git commands you ran
-# and the relevant terminal output (e.g., branch listing, merge messages)
-```
+user98@vorlesung:~$ cd ~
+user98@vorlesung:~$ mkdir Projekt-PP5
+user98@vorlesung:~$ cd Projekt-PP5
+user98@vorlesung:~/Projekt-PP5$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/user98/Projekt-PP5/.git/
+user98@vorlesung:~/Projekt-PP5$ git checkout -b feature-1
+Switched to a new branch 'feature-1'
+
 
 ---
 
@@ -67,7 +82,32 @@ In this exercise you will:
 **Your Commands & Output**
 
 ```bash
-# Paste here the push & clone commands and outputs
+user98@vorlesung:~$ "mkdir -p ~/repos/myproject.git && cd ~/repos/myproject.git && git init --bare"
+-bash: mkdir -p ~/repos/myproject.git && cd ~/repos/myproject.git && git init --bare: No such file or directory
+user98@vorlesung:~$ mkdir -p ~/repos/myproject.git && cd ~/repos/myproject.git && git init --bare
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/user98/repos/myproject.git/
+user98@vorlesung:~/repos/myproject.git$   git remote add origin-ssh user98@128.140.85.215:~/repos/myproject.git
+user98@vorlesung:~/repos/myproject.git$ git remote -v
+origin-ssh      user98@128.140.85.215:~/repos/myproject.git (fetch)
+origin-ssh      user98@128.140.85.215:~/repos/myproject.git (push)
+user98@vorlesung:~/repos/myproject.git$ git push origin-ssh master
+error: src refspec master does not match any
+error: failed to push some refs to '128.140.85.215:~/repos/myproject.git'
+user98@vorlesung:~/repos/myproject.git$ git clone user98@128.140.85.215:~/repos/myproject.git myproject-clone
+Cloning into 'myproject-clone'...
+user98@128.140.85.215's password:
+warning: You appear to have cloned an empty repository.
+user98@vorlesung:~/repos/myproject.git$
 ```
 
 ---
@@ -89,7 +129,8 @@ In this exercise you will:
 **Your Commands & Output**
 
 ```bash
-# Paste here the remote‐adding & push outputs
+origin-ssh      user98@128.140.85.215:~/repos/myproject.git (fetch)
+origin-ssh      user98@128.140.85.215:~/repos/myproject.git (push)
 ```
 
 ---
